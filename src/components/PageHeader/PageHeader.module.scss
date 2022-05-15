@@ -1,9 +1,10 @@
 @import "../../scss/index.scss";
 
-
 .header {
   background-color: $main-cl;
   box-shadow: $boxsh-lg;
+  border: 1px solid rgba($color: #000000, $alpha: .2);
+
 }
 
 .nav {
@@ -16,9 +17,6 @@
   height: 100%;
 }
 
-.btn {
-  @include btn;
-}
 
 .li {
   width: 100%;

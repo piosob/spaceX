@@ -1,11 +1,19 @@
+// colors
 $main-cl: #313552;
 $main-cl-lighter: lighten($main-cl, 10%);
 $header-cl: #B8405E;
 $accent-cl: #2EB086;
 $accentlh-cl2: #EEE6CE;
 
+// fonts
 $mont: ('Montserrat', sans-serif);
 $rale: ('Raleway', sans-serif);
+$open: ('Open Sans', sans-serif);
 
+// box shadows
 $boxsh-sm: (3px 3px 4px 0px rgba(66, 68, 90, 0.5));
 $boxsh-lg: (4px 4px 8px 0px rgba(66, 68, 90, 0.5));
+$boxsh-xl: (6px 6px 10px 0px rgba(0, 0, 0, 0.7));
+
+// text shadows
+$txtsh-l: (2px 2px 3px rgba(0, 0, 0, 0.3))

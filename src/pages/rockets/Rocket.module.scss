@@ -1,0 +1,40 @@
+@import "../../scss/index.scss";
+
+.card {
+  background-color: $main-cl;
+  background-color: rgba($color: #000, $alpha: .3);
+  padding: 1em;
+  border-radius: 2em;
+  box-shadow: $boxsh-xl;
+  margin: 2em 0;
+}
+
+.heading {
+  font-family: $mont;
+  font-weight: bold;
+  text-align: center;
+  color: $header-cl;
+  font-size: 2em;
+  // padding: 1em 0 .5em 0;
+  text-transform: uppercase;
+  text-shadow: $txtsh-l;
+}
+
+.desc {
+  margin: 1em 0;
+  font-family: $open;
+  font-weight: 300;
+}
+
+.imgContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+}
+
+.img {
+  box-shadow: $boxsh-lg;
+  border-radius: 1em;
+
+}
