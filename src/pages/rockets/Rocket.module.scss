@@ -38,3 +38,29 @@
   border-radius: 1em;
 
 }
+
+.paramsContainer {
+  margin: 1em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: .5em;
+}
+
+.paramsCard {
+  background-color: rgba($color: #fff, $alpha: .9);
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: $boxsh-xl;
+}
+
+.paramsHeading {
+  color: #333;
+  font-weight: bold;
+  text-shadow: $txtsh-l;
+  text-transform: uppercase;
+
+}
+
+.paramsDesc {
+  color: #000;
+}
