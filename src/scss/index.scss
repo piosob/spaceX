@@ -1,9 +1,9 @@
+@import "grid", "mixins", "reset", "variables", "staticClasses";
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap');
 
-// font-family: 'Montserrat', sans-serif;
-// font-family: 'Raleway', sans-serif;
 
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: $rale;
 }

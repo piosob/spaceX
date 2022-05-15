@@ -1,0 +1,41 @@
+@import "../../scss/index.scss";
+
+
+.header {
+  background-color: $main-cl;
+  box-shadow: $boxsh-lg;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+}
+
+.ul {
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  @include btn;
+}
+
+.li {
+  width: 100%;
+  height: 100%;
+  @include flex;
+}
+
+.link {
+  display: block;
+  width: 50%;
+  height: 100%;
+  padding: 1em 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  // color: $accentlh-cl2;
+  color: $header-cl;
+  // border-bottom: 4px solid transparent;
+  text-align: center;
+
+}
