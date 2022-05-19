@@ -19,8 +19,7 @@ export const Rockets = () => {
 
   useEffect(() => {
     getRockets();
-  },
-    [])
+  }, [])
 
   return (
     <div className="rockets">

@@ -12,7 +12,7 @@ export const PageHeader = () => {
             <div className="row">
               <div className="col-3"><li className={HeaderCSS.li}><NavLink className={HeaderCSS.link} to="/" end >home</NavLink></li></div>
               <div className="col-3"><li className={HeaderCSS.li}><NavLink className={HeaderCSS.link} to="/rockets" >rockets</NavLink></li></div>
-              <div className="col-3"><li className={HeaderCSS.li}><NavLink className={HeaderCSS.link} to="/missions">missions</NavLink></li></div>
+              <div className="col-3"><li className={HeaderCSS.li}><NavLink className={HeaderCSS.link} to="/missions">launches</NavLink></li></div>
               <div className="col-3"><li className={HeaderCSS.li}><NavLink className={HeaderCSS.link} to="/about">about</NavLink></li></div>
             </div>
           </ul>

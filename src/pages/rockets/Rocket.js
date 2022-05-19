@@ -1,9 +1,11 @@
 import styles from './Rocket.module.scss'
+import { prepareId } from './prepareId';
 
-export const Rocket = ({ name, desc, firstFl, height, diameter, mass, imgs, cost }) => {
+
+export const Rocket = ({ name, desc, firstFl, height, diameter, mass, imgs }) => {
   return (
     <div className={styles.card}>
-      <h3 className={styles.heading}>{name}</h3>
+      <h3 className={styles.heading} id={prepareId(name)}>{name} </h3>
       <p className={styles.desc}>{desc}</p>
       <div className={styles.paramsContainer}>
         <div className={styles.paramsCard}>

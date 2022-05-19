@@ -1,7 +1,7 @@
 import styles from './RocketContent.module.scss';
 import { Rocket } from './Rocket';
 
-export const RocketContent = ({ rockets }) => {
+export const RocketContent = ({ rockets, checkCards }) => {
   const rocketsList = rockets.map(rocket => (
     <Rocket
       key={rocket.id}
@@ -13,6 +13,7 @@ export const RocketContent = ({ rockets }) => {
       mass={rocket.mass.kg}
       imgs={rocket.flickr_images}
       cost={rockets.cost_per_launch}
+      updateScroll={checkCards}
     />
   ))
   return (

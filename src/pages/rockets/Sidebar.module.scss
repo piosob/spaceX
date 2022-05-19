@@ -4,3 +4,17 @@
   font-weight: bold;
   color: orange;
 }
+
+.list>* {
+  display: block;
+}
+
+.link {
+  margin: 1em 0;
+}
+
+.sidebar {
+  position: sticky;
+  top: 5em;
+  left: 0;
+}

@@ -1,0 +1,11 @@
+@import "../../scss/index.scss";
+
+.mainContent {
+  background-color: $main-cl-lighter;
+  min-height: 100vh;
+  color: $accentlh-cl2;
+
+  @media (min-width: 800px) {
+    padding-top: 5em;
+  }
+}

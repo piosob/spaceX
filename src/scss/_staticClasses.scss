@@ -2,13 +2,6 @@
   border-bottom: 4px solid $accent-cl;
 }
 
-
-.main-content {
-  background-color: $main-cl-lighter;
-  min-height: 100vh;
-  color: $accentlh-cl2;
-
-  @media (min-width: 800px) {
-    padding-top: 5em;
-  }
+.containerForNavAndA {
+  position: relative;
 }
