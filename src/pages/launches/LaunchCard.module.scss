@@ -1,0 +1,48 @@
+@import '../../scss/index.scss';
+
+.card {
+  @include flex(row, flex-start, center);
+  gap: 1em;
+  background-color: $main-cl;
+  background-color: rgba($color: #000, $alpha: .3);
+  padding: 1em;
+  border-radius: 2em;
+  box-shadow: $boxsh-xl;
+  margin: 2em 0;
+
+}
+
+.failed {
+  color: red;
+}
+
+
+.heading {
+  font-family: $mont;
+  font-weight: bold;
+  text-align: center;
+  color: $header-cl;
+  font-size: 2em;
+  // padding: 1em 0 .5em 0;
+  text-transform: uppercase;
+  text-shadow: $txtsh-l;
+}
+
+.desc {
+  margin: 1em 0;
+  font-family: $open;
+  font-weight: 300;
+}
+
+.icon {
+  width: 25%;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.link {
+  color: $accent-cl;
+  font-weight: bold;
+}
