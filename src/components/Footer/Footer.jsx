@@ -1,3 +1,5 @@
+import styles from './Footer.module.scss';
+
 export const Footer = () => {
-  return <p>Footer</p>;
+  return <p className={styles.footer}>Footer</p>;
 };

@@ -1,10 +1,30 @@
 @import '../../scss/grid_mixins_variables.scss';
 
 .homepageContainer {
+  @include flex(column, center, center);
+  position: relative;
   min-height: calc(100vh - 55px);
-  background-image: url(../../img/jumbo_xl.jpg);
+  // background-image: url(../../img/1_xl.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+}
+
+.container {
+  font-family: $mont;
+  max-width: 40%;
+  z-index: 2;
+  color: $light-text;
+  text-shadow: $txtsh-l;
 }
