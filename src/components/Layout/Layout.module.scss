@@ -1,4 +1,4 @@
-@import "../../scss/index.scss";
+@import '../../scss/grid_mixins_variables.scss';
 
 .mainContent {
   background-color: $main-cl-lighter;
@@ -6,6 +6,6 @@
   color: $accentlh-cl2;
 
   @media (min-width: 800px) {
-    padding-top: 5em;
+    padding-top: 55px;
   }
 }

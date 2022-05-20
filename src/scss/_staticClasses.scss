@@ -1,3 +1,5 @@
+@import "./grid_mixins_variables.scss";
+
 .active {
   border-bottom: 4px solid $accent-cl;
 }

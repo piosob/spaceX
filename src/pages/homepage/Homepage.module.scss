@@ -1,0 +1,10 @@
+@import '../../scss/grid_mixins_variables.scss';
+
+.homepageContainer {
+  min-height: calc(100vh - 55px);
+  background-image: url(../../img/jumbo_xl.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}

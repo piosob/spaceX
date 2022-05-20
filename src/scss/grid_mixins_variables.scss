@@ -1,0 +1,81 @@
+// GRID
+
+@use "sass:math";
+
+$column: 12;
+$gap: 1em;
+$page-width: 1200px;
+
+.container {
+
+  margin: 0 auto;
+  max-width: $page-width;
+  padding-left: $gap*2;
+  padding-right: $gap*2;
+}
+
+[class^="col-"] {
+
+  padding: 0 $gap;
+  box-sizing: border-box;
+  // margin-top: math.div($gap, 2);
+  // margin-bottom: math.div($gap, 2);
+  // border: .5px solid rgba($color: #000000, $alpha: .2);
+}
+
+.row {
+  margin-left: -$gap*2;
+  margin-right: -$gap*2;
+
+  @media (min-width: 600px) {
+    display: flex;
+
+    @for $i from 1 through $column {
+      .col-#{ $i } {
+        width: math.div(100%, $column) * $i;
+      }
+
+    }
+
+  }
+}
+
+// MIXINS
+
+@mixin flex($direction : row, $justify : center, $align : center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin btn() {
+  padding: 1em 1.5em;
+  border-radius: 1em;
+  box-shadow: $boxsh-lg;
+  cursor: pointer;
+  font-family: $mont;
+}
+
+
+
+// VARIABLES
+// colors
+$main-cl: #313552;
+$main-cl-lighter: lighten($main-cl, 10%);
+$header-cl: #B8405E;
+$accent-cl: #2EB086;
+$accentlh-cl2: #EEE6CE;
+
+// fonts
+$mont: ('Montserrat', sans-serif);
+$rale: ('Raleway', sans-serif);
+$open: ('Open Sans', sans-serif);
+
+// box shadows
+$boxsh-sm: (3px 3px 4px 0px rgba(66, 68, 90, 0.5));
+$boxsh-lg: (4px 4px 8px 0px rgba(66, 68, 90, 0.5));
+$boxsh-xl: (6px 6px 10px 0px rgba(0, 0, 0, 0.7));
+
+// text shadows
+$txtsh-l: (2px 2px 3px rgba(0, 0, 0, 0.3))

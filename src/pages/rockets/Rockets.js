@@ -4,7 +4,6 @@ import { PATHS } from "../../API/config";
 import { sendRequest } from "../../API/sendRequest";
 import { Sidebar } from "./Sidebar";
 import { RocketContent } from './RocketContent'
-import './rockets.scss'
 
 
 

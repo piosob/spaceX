@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { About, Homepage, Rockets, Launches, PageNotFound } from './pages';
 import { Layout } from './components/Layout/Layout';
 
-import './scss/App.scss'
 
 export function App() {
   return (
