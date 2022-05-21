@@ -1,23 +1,5 @@
 @import "../../scss/grid_mixins_variables.scss";
 
-.card {
-  background-color: rgba($color: #000, $alpha: .3);
-  padding: 1em;
-  border-radius: 2em;
-  box-shadow: $boxsh-xl;
-  margin: 2em 0;
-}
-
-.heading {
-  font-family: $mont;
-  font-weight: bold;
-  text-align: center;
-  color: $header-cl;
-  font-size: 2em;
-  // padding: 1em 0 .5em 0;
-  text-transform: uppercase;
-  text-shadow: $txtsh-l;
-}
 
 .desc {
   margin: 1em 0;

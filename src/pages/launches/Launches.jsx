@@ -31,8 +31,6 @@ export const Launches = () => {
     setIsLoading(false);
   }, []);
 
-  console.log(launches);
-
   const indexOfLastLaunch = currentPage * LAUNCH_PER_PAGE;
   const indexOfFirstLaunch = indexOfLastLaunch - LAUNCH_PER_PAGE;
   const currentLaunches = launches.slice(indexOfFirstLaunch, indexOfLastLaunch);

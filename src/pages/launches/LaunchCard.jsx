@@ -23,7 +23,7 @@ export const LaunchCard = ({ name, date, desc, success, flightNumber, icon, arti
         <div className={styles.textContent}>
           <p>{desc}</p>
           {showDate(date)}
-          <a className={styles.link} href={article}>
+          <a className="link" href={article}>
             Read more
           </a>
         </div>

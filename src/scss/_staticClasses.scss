@@ -7,3 +7,28 @@
 .containerForNavAndA {
   position: relative;
 }
+
+.card {
+  flex-grow: 1;
+  background-color: rgba($color: #000, $alpha: .3);
+  padding: 1em;
+  border-radius: 2em;
+  box-shadow: $boxsh-xl;
+  margin: 2em 0;
+}
+
+.heading {
+  font-family: $mont;
+  font-weight: bold;
+  text-align: center;
+  color: $header-cl;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-shadow: $txtsh-l;
+}
+
+.link {
+  font-weight: bold;
+  color: $accent-orange;
+  text-decoration: underline;
+}

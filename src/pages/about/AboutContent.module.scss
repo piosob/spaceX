@@ -1,0 +1,62 @@
+@import '../../scss/grid_mixins_variables.scss';
+
+.desc {
+  margin: 1em 0;
+  font-family: $open;
+  font-weight: 300;
+  line-height: 2em;
+  text-align: justify;
+  font-size: 1em;
+}
+
+.apiHeading {
+  font-size: 1.3em;
+  font-family: $mont;
+  font-weight: bold;
+  text-align: center;
+  color: $header-cl;
+  text-transform: uppercase;
+  text-shadow: $txtsh-l;
+}
+
+.generalInfo,
+.headquarters,
+.links {
+  @include flex(row, space-around, center);
+
+  .desc {
+    line-height: 1em
+  }
+}
+
+.disclaimer {
+  @include flex(row, space-between, flex-start);
+  gap: 1em;
+  background-color: $header-cl;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 1em;
+  border: 3px solid $header-cl;
+  font-family: $open;
+
+  .desc {
+    margin: 0;
+  }
+}
+
+.exclamation {
+  font-size: 2em;
+}
+
+.card {
+  background-color: rgba($color: #000, $alpha: .3);
+  padding: 1em;
+  border-radius: 2em;
+  box-shadow: $boxsh-xl;
+  margin: 2em 0;
+}
+
+.twitter {
+  font-size: 1.5em;
+  color: #00acee;
+}
