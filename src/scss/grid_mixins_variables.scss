@@ -63,14 +63,7 @@ $page-width: 1200px;
 
 // VARIABLES
 // colors
-// $main-cl: #313552;
-// $main-cl-lighter: lighten($main-cl, 1%);
-// $header-cl: #B8405E;
-// $accent-cl: #2EB086;
-// $accentlh-cl2: #EEE6CE;
-// $light-text: #e6e6e6;
-
-$main-cl: #000000;
+$main-cl: rgba($color: #000000, $alpha: .8);
 $main-cl-lighter: #090112;
 $header-cl: #b71c29;
 $accent-cl: #f9c74f;
@@ -84,7 +77,7 @@ $rale: ('Raleway', sans-serif);
 $open: ('Open Sans', sans-serif);
 
 // box shadows
-$boxsh-sm: (3px 3px 4px 0px rgba(66, 68, 90, 0.5));
+$boxsh-sm: (3px 3px 4px 0px #ffffff10);
 $boxsh-lg: (4px 4px 8px 0px rgba(66, 68, 90, 0.5));
 $boxsh-bl: (4px 4px 8px 0px rgba(200, 200, 200, 0.1));
 $boxsh-xl: (6px 6px 10px 0px rgba(0, 0, 0, 0.7));
