@@ -1,8 +1,7 @@
-import styles from './RocketContent.module.scss';
 import { Rocket } from './Rocket';
 
 export const RocketContent = ({ rockets, checkCards }) => {
-  const rocketsList = rockets.map(rocket => (
+  const rocketsList = rockets.map((rocket) => (
     <Rocket
       key={rocket.id}
       name={rocket.name}
@@ -15,11 +14,6 @@ export const RocketContent = ({ rockets, checkCards }) => {
       cost={rockets.cost_per_launch}
       updateScroll={checkCards}
     />
-  ))
-  return (
-    <div>
-      <h2 className={styles.heading}>Detailed information about each rocket.</h2>
-      {rocketsList}
-    </div>
-  );
-}
+  ));
+  return <div>{rocketsList}</div>;
+};
