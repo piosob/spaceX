@@ -1,6 +1,5 @@
 @import '../../scss/grid_mixins_variables.scss';
 
-
 .desc {
   margin: 1em 0;
   font-family: $open;
@@ -9,8 +8,6 @@
   text-align: justify;
   font-size: 1.1em;
 }
-
-
 
 .technologiesHeading {
   font-family: $mont;
@@ -36,11 +33,11 @@
 
 .fontAwesome {
   font-size: 1.5em;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
 .sass {
-  color: #CD6799;
+  color: #cd6799;
 }
 
 .check {

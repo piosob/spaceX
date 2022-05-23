@@ -1,20 +1,19 @@
 // GRID
 
-@use "sass:math";
+@use 'sass:math';
 
 $column: 12;
 $gap: 1em;
 $page-width: 1200px;
 
 .container {
-
   margin: 0 auto;
   max-width: $page-width;
-  padding-left: $gap*2;
-  padding-right: $gap*2;
+  padding-left: $gap * 2;
+  padding-right: $gap * 2;
 }
 
-[class^="col-"] {
+[class^='col-'] {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -26,8 +25,8 @@ $page-width: 1200px;
 }
 
 .row {
-  margin-left: -$gap*2;
-  margin-right: -$gap*2;
+  margin-left: -$gap * 2;
+  margin-right: -$gap * 2;
 
   @media (min-width: 600px) {
     display: flex;
@@ -36,15 +35,13 @@ $page-width: 1200px;
       .col-#{ $i } {
         width: math.div(100%, $column) * $i;
       }
-
     }
-
   }
 }
 
 // MIXINS
 
-@mixin flex($direction : row, $justify : center, $align : center) {
+@mixin flex($direction: row, $justify: center, $align: center) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -59,16 +56,16 @@ $page-width: 1200px;
   font-family: $mont;
 }
 
-
-
 // VARIABLES
 // colors
-$main-cl: rgba($color: #000000, $alpha: .8);
+$main-cl: rgba($color: #000000,
+  $alpha: 0.8,
+);
 $main-cl-lighter: #090112;
 $header-cl: #b71c29;
 $accent-cl: #f9c74f;
 $accent-orange: #f8961e;
-$accentlh-cl2: #EEE6CE;
+$accentlh-cl2: #eee6ce;
 $light-text: #f1faee;
 
 // fonts
@@ -83,4 +80,4 @@ $boxsh-bl: (4px 4px 8px 0px rgba(200, 200, 200, 0.1));
 $boxsh-xl: (6px 6px 10px 0px rgba(0, 0, 0, 0.7));
 
 // text shadows
-$txtsh-l: (2px 2px 3px rgba(0, 0, 0, 0.3))
+$txtsh-l: (2px 2px 3px rgba(0, 0, 0, 0.3));

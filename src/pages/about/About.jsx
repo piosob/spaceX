@@ -25,9 +25,9 @@ export const About = () => {
           <div className="card">
             <h1 className="heading">About this page</h1>
             <p className={styles.desc}>
-              This page was made for educational purpose for practise front-end skills. Here you
-              will find data about SpaceX launches and vehicles produced by SpaceX. Data for this
-              site is provided by{' '}
+              This page was made for educational purpose only for practise front-end skills. Here
+              you will find data about SpaceX launches and vehicles produced by SpaceX. Data for
+              this site is provided by{' '}
               <a className="link" href="https://github.com/r-spacex/SpaceX-API">
                 SpaceX-API{' '}
               </a>{' '}

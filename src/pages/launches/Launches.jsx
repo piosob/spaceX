@@ -39,14 +39,21 @@ export const Launches = () => {
     setCurrentPage(pageNumber);
   }
   return (
-    <div className="container">
-      <h2>Launches</h2>
-      <Pagination
-        launchPerPage={LAUNCH_PER_PAGE}
-        totalLaunches={launches.length}
-        paginate={paginate}
-      />
-      {isLoading ? <h3>fetching data...</h3> : <LaunchesList launches={currentLaunches} />}
+    <div className="launches">
+      <div className="container">
+        <div className="row">
+          <div className="col-2">
+            <Pagination
+              launchPerPage={LAUNCH_PER_PAGE}
+              totalLaunches={launches.length}
+              paginate={paginate}
+            />
+          </div>
+          <div className="col-10">
+            {isLoading ? <h3>fetching data...</h3> : <LaunchesList launches={currentLaunches} />}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

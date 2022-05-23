@@ -1,5 +1,4 @@
-@import "../../scss/grid_mixins_variables.scss";
-
+@import '../../scss/grid_mixins_variables.scss';
 
 .desc {
   margin: 1em 0;
@@ -9,27 +8,33 @@
 
 .imgContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+
+  @media (min-width: 850px) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+
   gap: 1em;
 }
 
 .img {
   box-shadow: $boxsh-lg;
   border-radius: 1em;
-  object-fit: cover;
-
+  object-fit: contain;
 }
 
 .paramsContainer {
   margin: 1em 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .paramsCard {
-  background-color: rgba($color: #fff, $alpha: .9);
+  background-color: rgba($color: #fff, $alpha: 0.9);
   padding: 1em;
   border-radius: 1em;
   box-shadow: $boxsh-xl;
@@ -40,7 +45,6 @@
   font-weight: bold;
   text-shadow: $txtsh-l;
   text-transform: uppercase;
-
 }
 
 .paramsDesc {

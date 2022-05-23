@@ -13,12 +13,15 @@
 
 
 .ul {
-  @include flex(row, flex-start, center);
+  @include flex(row, center, center);
   flex-wrap: wrap;
   gap: .5em;
 }
 
 .btn {
+  @include flex(row, center, center);
+  width: 30px;
+  height: 23px;
   font-family: $mont;
   background-color: $accent-cl;
   padding: .5em 1em;

@@ -7,17 +7,18 @@ export const Pagination = ({ launchPerPage, totalLaunches, paginate }) => {
     pageNumbers.push(i);
   }
 
+  const pagesButtons = pageNumbers.map((number) => (
+    <li key={number}>
+      <button className={styles.btn} onClick={() => paginate(number)}>
+        {number}
+      </button>
+    </li>
+  ));
+
   return (
     <nav className={styles.nav}>
-      <ul className={styles.ul}>
-        {pageNumbers.map((number) => (
-          <li key={number}>
-            <button className={styles.btn} onClick={() => paginate(number)}>
-              {number}
-            </button>
-          </li>
-        ))}
-      </ul>
+      <h3 className="heading">Pages</h3>
+      <ul className={styles.ul}>{pagesButtons}</ul>
     </nav>
   );
 };

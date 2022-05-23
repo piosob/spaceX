@@ -3,7 +3,7 @@
 .homepageContainer {
   @include flex(column, center, center);
   position: relative;
-  min-height: calc(100vh - 55px);
+  min-height: 100vh;
   // background-image: url(../../img/1_xl.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@
 
   &::after {
     display: block;
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -23,8 +23,13 @@
 
 .container {
   font-family: $mont;
-  max-width: 40%;
+  max-width: 80%;
   z-index: 2;
   color: $light-text;
   text-shadow: $txtsh-l;
+  text-align: center;
+
+  @media (min-width: 800px) {
+    max-width: 40%;
+  }
 }
