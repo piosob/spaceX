@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './LaunchCard.module.scss';
+import { fallback } from '../../img';
 
 export const LaunchCard = ({ name, date, desc, success, flightNumber, icon, article }) => {
   const showDate = (string) => {
@@ -13,7 +14,7 @@ export const LaunchCard = ({ name, date, desc, success, flightNumber, icon, arti
   };
   return (
     <div className={styles.card}>
-      <img className={styles.icon} src={icon} alt="icon of mission" />
+      <img className={styles.icon} src={icon || fallback} alt="icon of mission" />
       <div className={styles.content}>
         <h3 className={styles.heading}>Launch name: {name} </h3>
         <h2 style={success ? { color: 'green' } : { color: 'red' }}>
