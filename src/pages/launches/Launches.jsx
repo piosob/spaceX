@@ -16,7 +16,7 @@ export const Launches = () => {
     const data = {
       options: {
         limit: 5,
-        page: 1,
+        page: 3,
       },
     };
     sendRequest(PATHS.LAUNCHES, 'POST', data).then((result) => {

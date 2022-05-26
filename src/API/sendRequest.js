@@ -4,7 +4,7 @@ export function sendRequest(path, method = 'GET', data) {
   const url = `${BASE_URL}/${path}`
   return fetch(url, {
     method,
-    body: data && data,
+    body: data && JSON.stringify(data),
   })
     .then(response => {
       if (!response.ok) {
