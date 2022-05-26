@@ -12,8 +12,16 @@ export const Launches = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   function getLaunches() {
-    sendRequest(PATHS.LAUNCHES).then((result) => {
-      const data = result.map((launch) => ({
+    // object for pagination options
+    const data = {
+      options: {
+        limit: 5,
+        page: 1,
+      },
+    };
+    sendRequest(PATHS.LAUNCHES, 'POST', data).then((result) => {
+      console.log(result);
+      const data = result.docs.map((launch) => ({
         id: launch.id,
         name: launch.name,
         date: launch.date_utc,
