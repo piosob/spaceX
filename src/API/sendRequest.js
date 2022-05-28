@@ -5,6 +5,9 @@ export function sendRequest(path, method = 'GET', data) {
   return fetch(url, {
     method,
     body: data && JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json',
+    },
   })
     .then(response => {
       if (!response.ok) {

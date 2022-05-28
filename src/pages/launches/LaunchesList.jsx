@@ -1,9 +1,9 @@
 import React from 'react';
 import { LaunchCard } from './LaunchCard';
-export const LaunchesList = ({ launches }) => {
+export const LaunchesList = ({ launchesItems }) => {
   return (
     <ul>
-      {launches.map((launch) => (
+      {launchesItems.map((launch) => (
         <LaunchCard
           key={launch.id}
           name={launch.name}

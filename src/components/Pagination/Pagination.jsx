@@ -28,18 +28,19 @@ import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import styles from './Pagination.module.scss';
 
-export const Pagination = () => {
+export const Pagination = ({ totalPages, setActivePage }) => {
   const [pages, setPages] = useState([]);
 
   const handlePageClick = (clicked) => {
-    console.log(clicked.selected);
+    if (typeof setActivePage !== 'function') return;
+    setActivePage(clicked.selected + 1);
   };
   return (
     <ReactPaginate
       previousLabel={'previous'}
       nextLabel={'next'}
       breakLabel={'...'}
-      pageCount={20}
+      pageCount={totalPages}
       marginPagesDisplayed={2}
       pageRangeDisplayed={3}
       onPageChange={handlePageClick}
