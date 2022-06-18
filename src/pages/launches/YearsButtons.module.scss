@@ -1,15 +1,16 @@
 @import '../../scss/grid_mixins_variables.scss';
 
-.nav {
+.years-container {
   @include flex(column, space-evenly, center);
-  margin: 2em 0;
+  margin: 0;
   position: sticky;
-  top: 60%;
+  top: 10%;
   left: 0;
   background-color: rgba($color: #000000, $alpha: .7);
   padding: 1em .3em;
   border-radius: 1em;
   box-shadow: $boxsh-sm;
+
 
   >* {
     display: block;
@@ -18,16 +19,25 @@
   }
 }
 
-.pageItem {
+.heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: $header-cl
+}
+
+.year-li {
   @include flex();
+}
+
+.year-btn {
+  @include flex();
+  padding: .1em 0;
+  color: $accentlh-cl2;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 
-  .pageLink {
-    @include flex();
-
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .active {
