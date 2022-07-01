@@ -35,7 +35,7 @@ export const YearsButtons = ({ onYearClick }) => {
   return (
     <div className={styles['years-container']}>
       <h4 className={styles.heading}>Years</h4>
-      <ul>{yearsList}</ul>
+      <ul className={styles.list}>{yearsList}</ul>
     </div>
   );
 };

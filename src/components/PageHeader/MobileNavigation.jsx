@@ -8,7 +8,6 @@ export const MobileNavigation = () => {
   const [openMobileNavigation, setOpenMobileNavigation] = useState(false);
 
   function hamburgerClick() {
-    console.log('klikam');
     setOpenMobileNavigation((openMobileNavigation) => !openMobileNavigation);
   }
   function hideNav() {

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-//17.06.2022 skonczyłem na tym że, jest paginacja na lata. Trzeba zrobić tak, żeby po kliknięciu 2019 - jest 13 lotów, i dla tych 13 lotów trzeba zrobić paginację. Jak mniej niż 5 to bez dolnej paginacji.
-
 import { PATHS } from '../../API/config';
 import { sendRequest } from '../../API/sendRequest';
 import { LaunchesList } from './LaunchesList';
@@ -11,51 +9,14 @@ import { YearsButtons } from './YearsButtons';
 export const Launches = () => {
   const [launches, setLaunches] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [totalPages, setTotalPages] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [activeYear, setActiveYear] = useState(0);
+  const [totalDocs, setTotalDocs] = useState(0);
+  const [clickedYear, setClickedYear] = useState(0);
 
   const LAUNCH_PER_PAGE = 5;
 
-  function setActivePage(page) {
-    setCurrentPage(page);
-  }
-
-  // function getLaunchesForPagination() {
-  //   // object for pagination options
-  //   const data = {
-  //     options: {
-  //       limit: LAUNCH_PER_PAGE,
-  //       page: currentPage,
-  //     },
-  //   };
-  //   sendRequest(PATHS.LAUNCHES, 'POST', data).then((result) => {
-  //     console.log(result);
-  //     const data = result.docs.map((launch) => ({
-  //       id: launch.id,
-  //       name: launch.name,
-  //       date: launch.date_utc,
-  //       desc: launch.details,
-  //       success: launch.success,
-  //       flightNumber: launch.flight_number,
-  //       icon: launch.links.patch.small,
-  //       article: launch.links.article,
-  //     }));
-  //     setLaunches(data);
-  //     setTotalPages(result.totalPages);
-  //   });
-  // }
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   getLaunchesForPagination();
-  //   if (launches) {
-  //     setIsLoading(false);
-  //   }
-  // }, [currentPage]);
-
-  function getLaunchesForYearsPagination(year) {
+  function getLaunchesForYearsPagination(year, page = 1) {
     // object for pagination options
-    setActiveYear(year);
+    setClickedYear(year);
     const data = {
       query: {
         date_utc: {
@@ -64,13 +25,13 @@ export const Launches = () => {
         },
       },
       options: {
-        limit: 50,
-        page: currentPage,
+        limit: LAUNCH_PER_PAGE,
+        page: page,
       },
     };
 
     sendRequest(PATHS.LAUNCHES, 'POST', data).then((result) => {
-      console.log(result);
+      setIsLoading(true);
       const data = result.docs.map((launch) => ({
         id: launch.id,
         name: launch.name,
@@ -82,7 +43,8 @@ export const Launches = () => {
         article: launch.links.article,
       }));
       setLaunches(data);
-      setTotalPages(result.totalPages);
+      setTotalDocs(result.totalDocs);
+      setIsLoading(false);
     });
   }
 
@@ -92,12 +54,11 @@ export const Launches = () => {
         <div className="row" style={{ paddingTop: '2em' }}>
           <div className="col-2">
             <YearsButtons onYearClick={getLaunchesForYearsPagination} />
-            {launches.length > 5 ? (
+            {totalDocs > 5 ? (
               <Pagination
-                launchPerPage={LAUNCH_PER_PAGE}
-                totalPages={totalPages}
-                setActivePage={setActivePage}
-                setActiveYear={setActiveYear}
+                totalPages={Math.ceil(totalDocs / LAUNCH_PER_PAGE)}
+                clickedYear={clickedYear}
+                onPaginationClick={getLaunchesForYearsPagination}
               />
             ) : (
               ''
@@ -106,10 +67,10 @@ export const Launches = () => {
           <div className="col-10">
             {launches.length === 0 ? <h1>Select year!</h1> : ''}
             {isLoading && <h3>Loading launches...</h3>}
-            {activeYear ? (
+            {clickedYear ? (
               <h2>
-                In {activeYear} there was / were{' '}
-                <strong style={{ color: 'red' }}>{launches.length}</strong> launch/es.
+                In {clickedYear} there was / were{' '}
+                <strong style={{ color: 'red' }}>{totalDocs}</strong> launch/es.
               </h2>
             ) : (
               ''

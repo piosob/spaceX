@@ -1,6 +1,10 @@
 @import '../../scss/grid_mixins_variables.scss';
 
 .card {
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
+
   @include flex(row, flex-start, center);
   gap: 1em;
   background-color: $main-cl;
@@ -34,6 +38,10 @@
 
 .icon {
   width: 25%;
+
+  @media (max-width: 400px) {
+    width: 50%;
+  }
 }
 
 .content {

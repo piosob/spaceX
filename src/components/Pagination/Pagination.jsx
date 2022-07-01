@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-
 import ReactPaginate from 'react-paginate';
 import styles from './Pagination.module.scss';
 
-export const Pagination = ({ totalPages, setActivePage, setActiveYear }) => {
+export const Pagination = ({ totalPages, clickedYear, onPaginationClick }) => {
   const handlePageClick = (clicked) => {
-    if (typeof setActivePage !== 'function') return;
-    setActivePage(clicked.selected + 1);
-    setActiveYear(0);
+    const clickedPageOnPagination = clicked.selected + 1;
+    if (typeof onPaginationClick !== 'function') return;
+    onPaginationClick(clickedYear, clickedPageOnPagination);
   };
   return (
     <ReactPaginate
