@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { About, Homepage, Rockets, Launches, PageNotFound } from './pages';
 import { Layout } from './components/Layout/Layout';
 
 export function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -16,6 +16,6 @@ export function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
