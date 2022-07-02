@@ -22,7 +22,7 @@ export const Homepage = () => {
     >
       <div className={styles.container}>
         <h1 className={styles.h1}> SpaceX missions</h1>
-        <p className={styles.desc}>Example page built in React framework.</p>
+        <p className={styles.desc}>Example page built in React library.</p>
       </div>
     </div>
   );
