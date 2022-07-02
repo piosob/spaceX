@@ -17,5 +17,6 @@
 7. [SCSS](https://sass-lang.com/)
 8. [Framer-motion](https://www.npmjs.com/package/framer-motion)
 9. [React-paginate](https://www.npmjs.com/package/react-paginate)
+10. [React-scroll](https://www.npmjs.com/package/react-scroll)
 
 #### DISCLAIMER: The creator and maintainers of this website have no affiliation with SpaceX. The content herein should be considered for educational purposes only. Photography used on this website is the property of SpaceX and can be found on the unsplash.com.
