@@ -1,12 +1,18 @@
+import { Link } from 'react-scroll';
 import styles from './Sidebar.module.scss';
-import { prepareId } from './prepareId';
 export const Sidebar = ({ rockets }) => {
   const names = rockets.map((rocket) => {
-    const path = `#${prepareId(rocket.name)}`;
     return (
-      <a key={rocket.id} href={path} className={styles.link}>
+      <Link
+        key={rocket.id}
+        to={rocket.name.toLowerCase().replace(' ', '')}
+        smooth={true}
+        duration={500}
+        offset={-100}
+        className={styles.link}
+      >
         {rocket.name}
-      </a>
+      </Link>
     );
   });
   return (

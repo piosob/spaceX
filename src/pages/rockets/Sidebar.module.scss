@@ -11,6 +11,12 @@
 
 .link {
   margin: 1em 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color: #fff, $alpha: .1);
+
+  }
 }
 
 .sidebar {

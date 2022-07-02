@@ -4,7 +4,7 @@ export const RocketContent = ({ rockets, checkCards }) => {
   const rocketsList = rockets.map((rocket) => (
     <Rocket
       key={rocket.id}
-      name={rocket.name}
+      name={rocket.name.toLowerCase().replace(' ', '')}
       desc={rocket.description}
       firstFl={rocket.first_flight}
       height={rocket.height.meters}

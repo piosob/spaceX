@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import { PATHS } from '../../API/config';
 import { sendRequest } from '../../API/sendRequest';
 import { Sidebar } from './Sidebar';
