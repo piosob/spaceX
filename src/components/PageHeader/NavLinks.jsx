@@ -50,7 +50,7 @@ export const NavLinks = ({ isNavShow, hideNav }) => {
         <NavLink
           onClick={handleClick}
           className={isNavShow ? styles.linkNarrower : styles.linkWider}
-          to="/missions"
+          to="/launches"
         >
           launches
         </NavLink>

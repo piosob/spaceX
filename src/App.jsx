@@ -11,7 +11,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/rockets" element={<Rockets />} />
-          <Route path="/missions" element={<Launches />} />
+          <Route path="/launches" element={<Launches />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

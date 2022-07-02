@@ -11,7 +11,7 @@ export const Sidebar = ({ rockets }) => {
   });
   return (
     <div className={`${styles.sidebar} card`}>
-      <h2 className={styles.heading}>Sidebar - navigation to specific rocket</h2>
+      <h2 className={styles.heading}>Sidebar</h2>
       <ul className={styles.list}>{names}</ul>
     </div>
   );
